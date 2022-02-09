@@ -46,7 +46,38 @@ export class Tab1Page {
     });
   }
 
-  onSubmit(){
-    console.log(this.bingoForm.value)
+  makeEntryKey(name: string): string {
+    return name.toString().toLowerCase().replace(/\s/g, '');
+  }
+
+  async addBingoEntry(data): Promise<boolean> {
+    let entrykey : string = this.makeEntryKey(data.nombre);
+    let newEntry = {[entrykey]: data};
+    try{
+      let res = await fetch('https://getpantry.cloud/apiv1/pantry/42246c73-26f8-4874-8219-dd4ead8eea31/basket/bingo', {
+        headers: {
+          "accept": "application/json, text/plain, */*",
+          "accept-language": "en-US,en;q=0.9,es;q=0.8",
+          "content-type": "application/json;charset=UTF-8",
+        },
+        method: 'put',
+        body: JSON.stringify({entries:newEntry}),
+      });
+      console.log(res);
+      return true;
+    } catch(err){
+      console.log(err);
+      return false;
+    }
+  }
+
+  async onSubmit(){
+    console.log(this.bingoForm.value);
+    let was_added = await this.addBingoEntry(this.bingoForm.value);
+    if(was_added){
+      alert("GG WP IZI");
+    } else {
+      alert("algo salió mal D:");
+    }
   }
 }
