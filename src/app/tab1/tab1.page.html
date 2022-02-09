@@ -1,0 +1,293 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bingo Nintendo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Bingo Nintendo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="bingoForm" (ngSubmit)="onSubmit()">
+    <ion-grid fixed >
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">Escribi tu nombre completo</ion-label>
+            <ion-input formControlName="nombre" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">
+         <ion-card>
+           <ion-card-content>
+             <ion-img src="../../assets/img/equino-fighter.png"></ion-img>
+             <ion-card-subtitle>KOF XV</ion-card-subtitle>
+             <ion-checkbox formControlName="opcion1"></ion-checkbox>
+           </ion-card-content>
+           
+         </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/gameboy.png"></ion-img>
+              <ion-card-subtitle>GB/GBC en el NSO</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion2"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/1-2Switch.png"></ion-img>
+              <ion-card-subtitle>1-2 Switch 2</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion3"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/splatoon.png"></ion-img>
+              <ion-card-subtitle>Splatoon 3</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion4"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/bayonetta.png"></ion-img>
+              <ion-card-subtitle>Bayonetta</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion5"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">
+         <ion-card>
+           <ion-card-content>
+             <ion-img src="../../assets/img/ports.png"></ion-img>
+             <ion-card-subtitle>Ports</ion-card-subtitle>
+             <ion-checkbox formControlName="opcion6"></ion-checkbox>
+           </ion-card-content>
+           
+         </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/xenoblade.png"></ion-img>
+              <ion-card-subtitle>Xenoblade 3</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion7"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/pikmin.png"></ion-img>
+              <ion-card-subtitle>Pikmin 4</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion8"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/dk.png"></ion-img>
+              <ion-card-subtitle>Donkey Kong</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion9"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/ff.png"></ion-img>
+              <ion-card-subtitle>Final Fantasy Pixel Perfect</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion10"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/fallguys.png"></ion-img>
+              <ion-card-subtitle>Fall Guys</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion11"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/silksong.png"></ion-img>
+              <ion-card-subtitle>Silk Song</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion12"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/pokemon.png"></ion-img>
+              <ion-card-subtitle>Pokemon</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion13"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/dq.png"></ion-img>
+              <ion-card-subtitle>Dragon Quest III 2D HD/ XVII</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion14"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/fireemblem.png"></ion-img>
+              <ion-card-subtitle>Fire Emblem Echoes: Geneaology of Holy War</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion15"></ion-checkbox>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+    
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">
+         <ion-card>
+           <ion-card-content>
+             <ion-img src="../../assets/img/p4g.png"></ion-img>
+             <ion-card-subtitle>Persona 4 Golden</ion-card-subtitle>
+             <ion-checkbox formControlName="opcion16"></ion-checkbox>
+           </ion-card-content>
+           
+         </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/metroid.png"></ion-img>
+              <ion-card-subtitle>Metroid Prime(Trilogy, Remake, 4)</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion17"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/resident.png"></ion-img>
+              <ion-card-subtitle>Resident Evil</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion18"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/digimon.png"></ion-img>
+              <ion-card-subtitle>Digimon Survive</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion19"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/n64.png"></ion-img>
+              <ion-card-subtitle>Más juegos de N64 en NSO</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion20"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/mariokart.png"></ion-img>
+              <ion-card-subtitle>Mario Kart 9/ Nintendo Kart</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion21"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/genshin.png"></ion-img>
+              <ion-card-subtitle>Genshin Impact</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion22"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/batman.png"></ion-img>
+              <ion-card-subtitle>Batman Arkham Collection</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion23"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/gba.png"></ion-img>
+              <ion-card-subtitle>Game Boy Advance NSO</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion24"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+        <ion-col size="2">
+          <ion-card>
+            <ion-card-content>
+              <ion-img src="../../assets/img/zelda.png"></ion-img>
+              <ion-card-subtitle>Twilight Princess/ WindWaker</ion-card-subtitle>
+              <ion-checkbox formControlName="opcion25"></ion-checkbox>
+            </ion-card-content>
+            
+          </ion-card>
+
+        </ion-col>
+
+      </ion-row>
+      
+    </ion-grid>
+    <ion-row style="padding:0px 30px 30px 30px;">
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+           <ion-button expand="full" color="success"  type="submit" [disabled]="bingoForm.invalid">
+             <ion-icon slot="start" name="save-outline"></ion-icon>
+             Guardar
+           </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

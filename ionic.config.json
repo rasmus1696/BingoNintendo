@@ -1,0 +1,7 @@
+{
+  "name": "Bingo Nientendo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
