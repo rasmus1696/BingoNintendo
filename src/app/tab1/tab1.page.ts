@@ -71,6 +71,7 @@ export class Tab1Page {
     }
   }
 
+
   async onSubmit(){
     console.log(this.bingoForm.value);
     let was_added = await this.addBingoEntry(this.bingoForm.value);
