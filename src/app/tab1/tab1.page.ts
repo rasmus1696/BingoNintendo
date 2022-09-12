@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ToastController } from '@ionic/angular';
+import { LoadingController, ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -12,12 +12,13 @@ export class Tab1Page {
   private bingoForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private loadingController: LoadingController
   ) {}
 
   ngOnInit(): void {
     this.bingoForm = this.formBuilder.group({
-      nombre: ['', [Validators.required, Validators.minLength(10)]],
+      nombre: ['', [Validators.required, Validators.minLength(5)]],
       opcion1: [false],
       opcion2: [false],
       opcion3: [false],
@@ -51,6 +52,7 @@ export class Tab1Page {
   }
 
   async addBingoEntry(data): Promise<boolean> {
+    
     let entrykey : string = this.makeEntryKey(data.nombre);
     let newEntry = {[entrykey]: data};
     try{
@@ -73,11 +75,15 @@ export class Tab1Page {
 
 
   async onSubmit(){
+    const loading = await this.loadingController.create();
+    await loading.present();
     console.log(this.bingoForm.value);
     let was_added = await this.addBingoEntry(this.bingoForm.value);
     if(was_added){
+      loading.dismiss();
       alert("GG WP IZI");
     } else {
+      loading.dismiss();
       alert("algo salió mal D:");
     }
   }
